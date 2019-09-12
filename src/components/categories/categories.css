@@ -1,0 +1,25 @@
+.categories__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 2%;
+}
+
+.categories__container .small__categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 200px;
+  /* min-height: 200px; */
+}
+
+
+.categories__container .big__categories {
+  min-width: 300px;
+  /* min-height: 300px; */
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
