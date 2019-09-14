@@ -14,6 +14,7 @@ class SingleShopCategory extends Component {
     };
   }
   componentDidMount() {
+    window.scrollTo(0, 0);
     let categoryType = this.props.match.params.categoryType;
     let foundCategory = data.find(
       e => e.title.toLowerCase() === categoryType.toLowerCase()

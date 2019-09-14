@@ -1,0 +1,15 @@
+.header__links__container a {
+  text-decoration: none !important;
+  color: black;
+  font-size: 1em;
+}
+
+.header__links__container .active {
+  color: blue;
+  font-weight: bold;
+}
+
+.header__links__container .right__content {
+  display: flex;
+  justify-content: space-around;
+}
