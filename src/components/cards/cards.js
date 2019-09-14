@@ -19,7 +19,7 @@ const Cards = ({ route, heading, itemsArr }) => {
         {itemsArr.map(({ id, ...props }, ind) =>
           ind < itemsToShow ? (
             <Col key={id}>
-              <SingleCard {...props} />
+              <SingleCard {...props} id={id} />
             </Col>
           ) : null
         )}

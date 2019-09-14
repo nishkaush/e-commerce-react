@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-// import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Home from "./../containers/home/home";
 import Shop from "./../containers/shop/shop";
 import Contact from "./../containers/contact/contact";
