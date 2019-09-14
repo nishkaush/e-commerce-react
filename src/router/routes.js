@@ -1,10 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+// import {} from "react-trans";
 
 import Home from "./../containers/home/home";
 import Shop from "./../containers/shop/shop";
 import Contact from "./../containers/contact/contact";
 import SignIn from "./../containers/signIn/signIn";
+import SingleShopCategory from "./../containers/singleShopCategory/singleShopCategory";
 
 export const routes = (
   <Switch>
@@ -12,5 +14,10 @@ export const routes = (
     <Route exact path="/shop" component={Shop} />
     <Route exact path="/contact" component={Contact} />
     <Route exact path="/sign-in" component={SignIn} />
+    <Route
+      exact
+      path="/shop/:categoryType"
+      component={SingleShopCategory}
+    ></Route>
   </Switch>
 );

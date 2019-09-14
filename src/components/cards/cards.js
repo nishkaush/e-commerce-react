@@ -1,19 +1,30 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import SingleCard from "./../singleCard/singleCard";
+import { Link } from "react-router-dom";
 
-const Cards = ({ heading, itemsArr }) => {
+const Cards = ({ route, heading, itemsArr }) => {
+  const itemsToShow = route ? 4 : itemsArr.length;
   return (
     <React.Fragment>
-      <h1>{heading}</h1>
-
+      {route ? (
+        <Link to={`/shop/${route}`}>
+          <h1 className="mt-5">{heading}</h1>
+          <hr />
+        </Link>
+      ) : (
+        <h2 className="mt-5">{heading}</h2>
+      )}
       <Row className="individual__category">
-        {itemsArr.map(({ id, ...props }) => (
-          <Col key={id}>
-            <SingleCard {...props} />
-          </Col>
-        ))}
+        {itemsArr.map(({ id, ...props }, ind) =>
+          ind < itemsToShow ? (
+            <Col key={id}>
+              <SingleCard {...props} />
+            </Col>
+          ) : null
+        )}
       </Row>
+      <br />
     </React.Fragment>
   );
 };
